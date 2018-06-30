@@ -5,24 +5,213 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <title>Miguel T Rivera | Portfolio</title>
+    <style>
+    /**** Nav *****/
+    .main-nav a {
+      outline: none;
+      text-decoration: none;
+      margin-right: 1.25em;
+    }
 
-    <title>Home | Miguel T Rivera | Portfolio</title>
+    .main-nav a:link {
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .main-nav a:visited {
+      color: #ffa319;
+    }
+
+    /*.main-nav a:focus {
+    
+    }*/
+
+    .main-nav a:hover {
+      background: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    /*.main-nav a:active {
+
+    }*/
+    /***** Layouts *****/
+    :root {
+      --primary-color: #00508A;
+      --accent-color: #7A4900;
+    }
+    html {
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    .brand-text {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      background: var(--primary-color);
+      top: 0;
+      left: 0;
+    }
+    .main-nav li {
+      display: inline;
+      margin-right: 1em;
+    }
+
+    .main-header {
+      height: 300px;
+      background: #fff;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-top: 5em;
+      margin-right: 1em;
+      float: right;
+    }
+
+    .about-content {
+    width: 66%;
+    padding-left: 3em;
+    padding-top: 6em; 
+    margin-bottom: 6em;
+    }
+
+    .about-heading {
+      color: var(--primary-color); 
+    }
+
+    .content-heading {
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .ftr {
+      text-align: center;
+    }
+
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    .project-image {
+      width: 250px;
+      height: 250px;
+    }
+    /**** Card ****/
+    .cards {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 1.5em;
+      margin-left: 15px;
+      margin: 10px;
+    }
+
+    .card-title-text {
+      margin: 0;
+    }
+
+    .card-subtitle-text {
+      margin: 0;
+    }
+
+    /*** Utility ***/
+    .clearfix {
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
+    .float-right {
+      float: right;
+    }
+    </style>
   </head>
   <body>
-    <!-- Navigation Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-center">
-      <a class="nav-link" href="./index.html">Home</a>
-      <a class="nav-link" href="./skills.html">Skills</a>
-      <a class="nav-link" href="./projects.html">Projects</a>
-      <a class="nav-link" href="./about-me.html">About Me</a>
-    </nav>
-    <h1 class="text-center">Hello, my name is Miguel</h1>
-    <p class="lead text-center">I'm a web developer by day, and cat whisperer at night.<br>Feel free to explore my <a href="./projects.html">projects</a>, view my technical <a href="./skills.html">skills</a>, or learn more <a href="#">about me</a>.</p>
-    <!-- Footer -->
-    <footer>
-      <p class="copyright text-center">&copy; 2018 Miguel T Rivera</p>
-    </footer>
+    <div class="container">
+      <header class="main-header">
+        <nav class="main-nav clearfix">
+          <ul>
+              <span class="brand-text">Miguel T Rivera</span>
+              <li class="float-right"><a href="#about-me">About Me</a></li>
+              <li class="float-right"><a href="#portfolio">Portfolio</a></li>
+          </ul>
+        </nav>
+        <img class="clearfix profile-img" src="https://i.imgur.com/PAwtJCD.jpg">
+        <div class="about-content">
+          <h2 id="about-me" class="about-heading">About Me</h2>
+          <p class="about-text">Hello, my name is Miguel T Rivera. I'm a web developer by day and cat whisperer at night. I'm a self-taught developer with an educational background in game development and animation. Feel free to explore my projects and <a href="mailto:mrivera108@outlook.com">contact me.</a></p>
+        </div>
+      </header>
+      <main class="main-content">
+        <h2 id="portfolio" class="content-heading">Portfolio</h2>
+        <div class="cards">
+          <div class="card">
+            <img class="project-image" src="https://s19.postimg.cc/hg8x6wj2r/simon.png">
+            <a href="https://codepen.io/mtrivera/pen/wqpZZZ" target="_blank">
+              <h2 class="card-title-text">Simon Game</h2>
+            </a>
+            <h3 class="card-subtitle-text">Front-End</h3>
+            <p>Play the popular game from the 70s in your browser.</p>
+          </div>
+          <div class="card">
+            <img class="project-image" src="https://s19.postimg.cc/m0v3ltncj/local-weather.png">
+            <a href="https://mtrivera.github.io/local-weather" target="_blank">
+              <h2 class="card-title-text">Local Weather</h2>
+            </a>
+            <h3 class="card-subtitle-text">Front-End</h3>
+            <p>Get the forecast of your local area.</p>
+          </div>
+          <div class="card">
+            <img class="project-image" src="https://s19.postimg.cc/bqsomvfk3/timestamp.png">
+            <a href="https://codepen.io/mtrivera/pen/wqpZZZ" target="_blank"></a>
+            <a href="https://ahead-celsius.glitch.me/" target="_blank">
+              <h2 class="card-title-text">Timestamp Microservice</h2>
+            </a>
+            <h3 class="card-subtitle-text">Back-end</h3>
+            <p>Determine if a passed string is a UNIX format timestamp.</p>
+          </div>
+          <div class="card">
+            <img class="project-image" src="https://s19.postimg.cc/cgbgz3awz/wiki.png">
+            <a href="https://codepen.io/mtrivera/pen/wqpZZZ" target="_blank"></a>
+            <a href="https://codepen.io/mtrivera/pen/amzpVw" target="_blank">
+              <h2 class="card-title-text">Wikipedia Viewer</h2>
+            </a>
+            <h3 class="card-subtitle-text">Front-End</h3>
+            <p>Query Wikipedia for information or get a random article.</p>
+          </div>
+          <div class="card">
+            <img class="project-image" src="https://s19.postimg.cc/gdyqoe2ub/header.png">
+            <a href="https://codepen.io/mtrivera/pen/wqpZZZ" target="_blank"></a>
+            <a href="https://endurable-sky.glitch.me/api/whoami" target="_blank">
+              <h2 class="card-title-text">Request Header Parser</h2>
+            </a>
+            <h3 class="card-subtitle-text">Back-end</h3>
+            <p>Discover your ip address, language, and software on your device.</p>
+          </div>
+        </div>
+      </main>
+      <footer class="ftr">
+        &copy;2018 Miguel T Rivera.<a href="mailto:mrivera108@outlook.com">Contact Me!</a>
+      </footer>
+    </div>
   </body>
 </html>
